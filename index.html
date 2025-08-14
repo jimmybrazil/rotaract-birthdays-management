@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No Borders - Birthdays</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>No Borders Rotaract e-Club</h1>
+        <h2>Birthday Management System</h2>
+    </header>
+
+    <main>
+        <section id="registration-section">
+            <form id="registration-form">
+                <input type="text" id="full-name" name="full-name" required placeholder="Full Name">
+                
+                <div class="birthday-group">
+                    <input type="number" id="birth-day" name="day" min="1" max="31" 
+                           placeholder="Day" required aria-label="Birth day">
+                    <select id="birth-month" name="month" required aria-label="Birth month">
+                        <option value="">Month</option>
+                        <option value="1">Janeiro</option>
+                        <option value="2">Fevereiro</option>
+                        <option value="3">Março</option>
+                        <option value="4">Abril</option>
+                        <option value="5">Maio</option>
+                        <option value="6">Junho</option>
+                        <option value="7">Julho</option>
+                        <option value="8">Agosto</option>
+                        <option value="9">Setembro</option>
+                        <option value="10">Outubro</option>
+                        <option value="11">Novembro</option>
+                        <option value="12">Dezembro</option>
+                    </select>
+                </div>
+                
+                <button type="submit">Save Member</button>
+            </form>
+        </section>
+
+        <section id="members-section">
+            <table id="members-table">
+                <thead>
+                    <tr>
+                        <th scope="col">Member Name</th>
+                        <th scope="col">Birth Date</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="members-list">
+                    <tr id="empty-state">
+                        <td colspan="3">No members registered</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 No Borders Rotaract e-Club</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
